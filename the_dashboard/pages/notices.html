@@ -1,0 +1,356 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta
+http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport"
+content="width=device-width, initial-scale=1"> <meta name="description"
+content=""> <meta name="author" content="">
+
+        <title>QWERTY Dashboard</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="../css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Startmin</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i>Comments
+                                        <span class="pull-right text-muted small"> <span id="timeComment"></span> minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> Students
+                                        <span class="pull-right text-muted small" id="noofstuds"></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i> Notices
+                                        <span class="pull-right text-muted small" id="noofnotices"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Courses
+                                        <span class="pull-right text-muted small" id="noofcourses"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> User <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="./../../folder_login/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                </span>
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="index.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Students<span class="fa arrow"></span></a>
+                              <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="enroll.html">Ennroll students</a>
+                                </li>
+                                <li>
+                                    <a href="./enrollStudents.php">Edit Student Details</a>
+                                </li>
+                                <li>
+                                    <a href="feestatements.php">Fees Statements</a>
+                                </li>
+                                <li>
+                                    <a href="finance.php">Finance</a>
+                                </li>
+                              </ul>
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                </li>
+                                <li>
+                                    <a href="courses.php"><i class="fa fa-edit fa-fw"></i> Courses</a>
+                                </li>
+                                <li>
+                                    <a href="notices.html"><i class="fa fa-edit fa-fw"></i> Notices</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Set Basic Info<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li>
+                                            <a href="panels-wells.html">Add Fulculties</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="users.html">USERS</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.nav-second-level -->
+                                </li>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div id="page-wrapper">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                  <div class="jumbotron row" id="notices">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <h3>Notices</h3>
+                  <div class="">
+                    <form class="form"  method="post" id="tinymceform">
+                      <h4>Title</h4>
+                      <input type="text" name="title" class="form-control" id="title_val" placeholder="Enter Title"><br>
+
+                      <div id="textbox">
+                        <textarea class="tinymce" id="tinymcedata">
+                        </textarea>
+                        <br>
+                        <br>
+
+                        <input class="btn-success  btn" id="sendtinymce" type="submit" name="submitBlog" value="send" style="float:right">
+                      </div><br> <br>
+                    </form>
+
+                  </div>
+                  </div>
+                  </div>
+                </div>
+
+              </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Notices Posted</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+
+
+
+
+                <!-- /.row -->
+                <div class="row">
+
+                    <!-- /.col-lg-6 -->
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <form class="form" id="search_notices" method="post">
+                        <label class="">Search A Notice</label><br>
+                        <input class="form-control" type="text" name="search_notices_input" onkeyup="fetch()" placeholder="Search Notice By Title/Posted By"><br>
+                      </form>
+                      <div class="" id="dumpresnotices">
+                        <button style="float:right" class="btn btn-danger" onclick ="$(`#dede`).slideUp()">close</button>
+
+                      </div>
+                    </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                          <br>
+                        <div class="panel tabbed-panel panel-primary">
+                            <div class="panel-heading clearfix">
+                                <div class="panel-title pull-left">Title</div>
+                                <div class="pull-right">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab-primary-1" data-toggle="tab" id="dumptitle">Tiltle</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="tab-primary-1">
+                                      Content will Appear Here.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../js/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../js/metisMenu.min.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="../js/startmin.js"></script>
+        <!-- Get Tiny mce -->
+        <script type ="text/javascript" src="./js/tinymce/tinymce.min.js"></script>
+        <script type ="text/javascript" src="./js/tinymce/init-tinymce.js"></script>
+
+        <script type="text/javascript">
+          $(document).ready(function () {
+            $("#tinymceform").submit(function (e) {
+              e.preventDefault()
+              tinymceFunc ();
+            })
+          }) //end of ready document
+
+          function fetch() {
+
+
+            $.ajax({
+              url:'./php/fetchNotices.php',
+              method:"post",
+              data:$("#search_notices").serialize(),
+              type:"text",
+              success:function (data) {
+                console.log(data);
+                data=JSON.parse(data)
+                $("#dumpresnotices").html("");
+          $.each(data,function (num,val) {
+            // students[""+val.id]=val/
+            // var the_notice = val.notice
+
+            $("#dumpresnotices").append('<div id="dede" style="cursor:pointer" onclick="alertnotices(\''+val.title+'\',\''+ val.notice.replace(/("|'|;)/g, "") + '\')" >TITLE : '+val.title+'</div>');
+            // $('#dede').on('click',function(){
+            //     alert($(this).attr())
+            // })
+              // if (val.title == val.title) {
+              //     return false;
+              // }
+            // )
+
+
+          })
+              },error:function (e) {
+                console.error(e);
+              }
+            })
+          }
+
+          // function alertnotices(title,notice){
+          //   alert(title+"   "+notice)
+          //   $("#dumptitle").html('<div>'+title+'</div>')
+          //   $("#tab-primary-1").html('<div>'+notice+'</div>')
+          //
+          // }
+
+
+
+          function tinymceFunc() {
+            var content = tinymce.get("tinymcedata").getContent();
+            var title_notice =$("#title_val").val();
+            console.log(content);
+            tinyMCE.triggerSave();
+            var formdata=new FormData()
+
+            formdata.append("title",$("#title_val").val())
+            formdata.append("text",$("#tinymcedata").val())
+            // alert(content)
+            $.ajax({
+              url:'./php/postnotice.php',
+              method:'post',
+              type:'GET',
+              processData:false,
+              contentType:false,
+              data:formdata,
+              success:function (data) {
+                // alert(data);
+                console.log(data)
+
+              },
+              error:function (data) {
+                alert (data);
+              }
+            })
+          }
+          
+        </script>
+
+    </body>
+</html>

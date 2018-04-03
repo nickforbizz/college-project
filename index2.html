@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>financing</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css"  href="css/index.css">
+<link rel="stylesheet" type="text/css"  href="css/w3.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<!-- <link rel="stylesheet" type="text/css"  href="css/style.css"> -->
+<!--
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+ -->
+<style media="screen">
+  .details{
+    margin: auto;
+  }
+</style>
+
+</head>
+<body id="body">
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html"><i class="fa fa-sun-o"></i>Qwerty College<strong></strong></a> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="the_dashboard/pages/login.html" oncligck="admin_func()"> Admin</a></li>
+        <li><a href="dashboard.php" >Dashboard</a></li>
+        <li><a href="#about-section" class="page-scroll">About</a></li>
+        <li><a href="#" >Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+  <!-- Modal for Sign in Admin -->
+
+    <div id="open_admin" class="w3-modal">
+      <div class="w3-modal-content w3-card-8 w3-animate-zoom" style="max-width:600px">
+
+        <div class="w3-center"><br>
+          <span onclick="document.getElementById('open_admin').style.display='none'" class="w3-closebtn w3-hover-red w3-container w3-padding-8 w3-display-topright" title="Close Modal">&times;</span>
+          <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+        </div>
+
+        <form class="w3-container" method="get">
+          <div class="w3-section">
+            <label><b>Username</b></label>
+            <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+
+            <label><b>Password</b></label>
+            <input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
+
+            <button class="w3-btn-block w3-green w3-section w3-padding" onclick="" type="submdit"><a href="the_dashboard/index.html">Login</a></button>
+            <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+          </div>
+        </form>
+
+        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+          <button onclick="document.getElementById('open_admin').style.display='none'" type="button" class="w3-btn w3-red">Cancel</button>
+          <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+        </div>
+
+      </div>
+    </div>
+<!-- About Section -->
+<div id="about-section">
+  <div class="container">
+    <div class="section-title jumbotron text-center center">
+      <h2 id="collegeName">Wellcome To <br> <span>QWERTY COMPUTER COLLEGE</span></h2>
+      <hr>
+      <div class="clearfix"></div>
+      <h4 id="Insert">The Education You Want. The Attention You Deserve</h4>
+    </div>
+    <div class="row">
+      <!-- <div class="col-md-6"> <img src="img/about.jpg" class="img-responsive"> </div> -->
+      <div class="col-md-6 col-lg-12 center">
+        <div class="well text-center" id="introWell">
+          <h4>Quick Intro</h4>
+          <p id="Intro">
+                    Our college offers quality serveces and also gives them an oppotunity <br> to be something great.
+              Join us today and acqure amazing skills that are demand on <br>the industry
+              We have excellent experts who will guide you and answer any questions you may have.<br>
+              What are you waiting for! Head to our <b> <i><a href="#">contact page</a></i> </b> and reach us.
+          </p>
+        </div><br>
+        <!-- <div class="well">
+
+        </div> -->
+        <div class="well">
+          <h3 class="text-center">The Core Units Offered.</h3>
+          <ul id="unitsOffered">
+            <li>unit 1</li>
+            <li>unit 2</li>
+            <li>unit 3</li>
+            <li>unit 4</li>
+          </ul>
+        </div>
+        <div class="text-center branches">
+          <h3 class="danger">Also see have branches</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer" style="background-color:#80ffe5;">
+  <div class="container">
+    <div class="fnav well text-center" style="background-color:#80ffe5 !important;">
+      <p>Copyright &copy; COLLEGE NAME</p>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- Javascripts
+    ================================================== -->
+<script>
+
+</script>
+</body>
+</html>

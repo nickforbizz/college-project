@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>QWERTY Dashboard</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- Timeline CSS -->
+        <link href="../css/timeline.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../css/startmin.css" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="../css/morris.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Startmin</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="index.php"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i>Comments
+                                        <span class="pull-right text-muted small"> <span id="timeComment"></span> minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> Students
+                                        <span class="pull-right text-muted small" id="noofstuds"></span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i> Notices
+                                        <span class="pull-right text-muted small" id="noofnotices"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Courses
+                                        <span class="pull-right text-muted small" id="noofcourses"></span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> User <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="./../../folder_login/logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                </span>
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="index.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Students<span class="fa arrow"></span></a>
+                              <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="enroll.html">Ennroll students</a>
+                                </li>
+                                <li>
+                                    <a href="./enrollStudents.php">Edit Student Details</a>
+                                </li>
+                                <li>
+                                    <a href="feestatements.php">Fees Statements</a>
+                                </li>
+                                <li>
+                                    <a href="finance.php">Finance</a>
+                                </li>
+                              </ul>
+                                <li>
+                                    <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                                </li>
+                                <li>
+                                    <a href="courses.php"><i class="fa fa-edit fa-fw"></i> Courses</a>
+                                </li>
+                                <li>
+                                    <a href="notices.html"><i class="fa fa-edit fa-fw"></i> Notices</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Set Basic Info<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li>
+                                            <a href="panels-wells.html">Add Fulculties</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="users.html">USERS</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.nav-second-level -->
+                                </li>
+                                <!-- /.nav-second-level -->
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Forms</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Enroll Students
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+
+                                    <div class="col-lg-6">
+                                        <form role="form" id="form_enroll">
+                                          <label>First Name</label> <br>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="fname" placeholder="Enter fname" required>
+                                          </div>
+
+                                          <label>Last Name</label> <br>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="lname" placeholder="Enter lname" required>
+                                          </div>
+                                          <label>Reg Number</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" id="get_reg" class="form-control inpt " name="regnumber" placeholder="Enter reg_number" required>
+                                          </div>
+                                          <label>Telephone</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="number" class="form-control inpt " name="telephone" placeholder="Enter Telephone" required>
+                                          </div>
+                                          <label>Email</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="email" class="form-control inpt " name="email" placeholder="Enter Email">
+                                          </div>
+                                          <label>National ID</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="number" class="form-control inpt " name="national_id" placeholder="Enter National Id" required>
+                                          </div>
+                                          <label>Postal Code</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="number" class="form-control inpt " name="p_code" placeholder="Enter Postal Code">
+                                          </div>
+                                          <label>Postal address</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="p_address" placeholder="Enter Postal address">
+                                          </div>
+                                          <label>Constituency</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <select class="form-control" name="constituency" id="constituency" required>
+
+                                              </select>
+                                          </div>
+                                          <label>County</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="county" placeholder="Enter County" required>
+                                          </div>
+                                          <label>Born Date</label>
+                                          <div class="form-group input-group col-lg-8">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="date" class="form-control inpt " name="bornday"min="1900" max="2030" placeholder="Enter Born Date" required>
+                                          </div>
+                                          <label>Religion</label>
+                                          <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <select class="form-control inpt" name="religion" id="religion" required>
+
+                                              </select>
+                                          </div>
+                                          <label>Course</label>
+                                          <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <select class="form-control inpt" name="courses" id="courses" required>
+
+                                              </select>
+                                          </div>
+                                          <label>Gender</label>
+                                          <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <select class="form-control inpt" name="gender" id="semgender" onchange="enableAmt()" required>
+                                                <option value=""   disabled selected>Select Gender </option>
+                                                <option value="MALE">MALE </option>
+                                                <option value="FEMALE">FEMALE </option>
+                                              </select>
+                                          </div>
+                                          <label>Town/City</label>
+                                          <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="town" placeholder="Enter Town/City">
+                                          </div>
+                                          <label>Marital Status</label>
+                                          <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control inpt " name="mstatus" placeholder="Enter Marital Status">
+                                          </div>
+                                          <input type="submit" class="btn btn-primary" value="Send">
+                                          <br><br>
+                                        </form>
+                                    </div>
+                                    <!-- /.col-lg-6 (nested)  KINS-->
+                                    <div class="col-lg-6">
+                                      <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                              Enter Kin(s) Details
+                                          </div>
+                                          <div class="panel-body">
+                                          <div class="row" style="padding-left:10%">
+                                            <form role="form" id="form_kin">
+                                              <label>Student Reg Number</label>
+                                              <div class="form-group input-group col-lg-6">
+                                                <span class="input-group-addon">@</span>
+                                                <input type="text" class="form-control inpt" id="insert_val" name="student_reg" placeholder="Enter fname">
+                                              </div>
+                                            <label>First Name</label>
+                                            <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control" name="fname" placeholder="Enter fname">
+                                            </div>
+                                            <label>Last Name</label>
+                                            <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="text" class="form-control" name="lname" placeholder="Enter lname">
+                                            </div>
+                                            <label>Telephone</label>
+                                            <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="number" class="form-control" name="phone" placeholder="Enter Telephone">
+                                            </div>
+                                            <label>Email</label>
+                                            <div class="form-group input-group col-lg-6">
+                                              <span class="input-group-addon">@</span>
+                                              <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                                            </div> <br>
+                                          <input type="submit" class="btn btn-primary" value="Send">
+                                          </form>
+                                    </div>
+                                  </div>
+                                    </div>
+                                </div>
+
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="../js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../js/metisMenu.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../js/startmin.js"></script>
+        <script src="../js/Dashboard.js"></script>
+
+        <script type="text/javascript">
+
+$(document).ready(function () {
+
+    $("#form_enroll").submit(function (e) {
+      e.preventDefault()
+      enroll()
+    })
+    $("#form_kin").submit(function (e) {
+      e.preventDefault()
+      alert()
+      insert_kin()
+    })
+     insert_rows_courses();
+     insert_rows_religion();
+     insert_rows_constituency()
+})
+
+ // var get_reg = $("#get_reg").val();
+ // $("#insert_val").val() = get_reg;
+ function insert_kin() {
+   $.ajax({
+     url:'./php/insert_kin.php',
+     method:'post',
+     type:'text',
+     data:$("#form_kin").serialize(),
+     success:function (msg) {
+       // msg = JSON.parse(msg)
+       console.log(msg);
+       alert(msg)
+     }, error: function (msg) {
+       alert(msg)
+     }
+   })
+ }
+
+function insert_rows_courses() {
+  $.ajax({
+    url:'./php/get_courses.php',
+    method:'post',
+    type:'text',
+    success:function (msg) {
+      // msg = JSON.parse(msg)
+      console.log(msg);
+      $("#courses").html(msg);
+    }, error: function (msg) {
+      alert(msg)
+    }
+  })
+}
+function insert_rows_religion() {
+  $.ajax({
+    url:'./php/get_religion.php',
+    method:'post',
+    type:'text',
+    success:function (msg) {
+      // msg = JSON.parse(msg)
+      console.log(msg);
+      $("#religion").html(msg);
+    }, error: function (msg) {
+      alert(msg)
+    }
+  })
+}
+function insert_rows_constituency() {
+  $.ajax({
+    url:'./php/get_constituency.php',
+    method:'post',
+    type:'text',
+    success:function (msg) {
+      // msg = JSON.parse(msg)
+      // console.log(msg);
+      $("#constituency").html(msg);
+    }, error: function (msg) {
+      alert("Something Went Wrong")
+    }
+  })
+}
+function enroll() {
+
+$.ajax({
+  url:'./php/enroll.php',
+  method:"post",
+  data:$("#form_enroll").serialize(),
+  type:"text",
+  success:function (data) {
+    alert(data);
+    $("#form_enroll")[0].reset();
+
+  },error:function (e) {
+    console.error(e);
+  }
+})
+
+}
+
+        </script>
+
+    </body>
+</html>

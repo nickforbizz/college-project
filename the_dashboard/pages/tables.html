@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Startmin - Bootstrap Admin Theme</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="../css/metisMenu.min.css" rel="stylesheet">
+
+        <!-- DataTables CSS -->
+        <link href="../css/dataTables/dataTables.bootstrap.css" rel="stylesheet">
+
+        <!-- DataTables Responsive CSS -->
+        <link href="../css/dataTables/dataTables.responsive.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="../css/startmin.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">Startmin</a>
+                </div>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+                </ul>
+
+                <ul class="nav navbar-right navbar-top-links">
+                    <li class="dropdown navbar-inverse">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-alerts">
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-comment fa-fw"></i> New Comment
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                        <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-tasks fa-fw"></i> New Task
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                        <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a class="text-center" href="#">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /.navbar-top-links -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                </span>
+                                </div>
+                                <!-- /input-group -->
+                            </li>
+                            <li>
+                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Students<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                  <li>
+                                      <a href="enroll.html">Ennroll students</a>
+                                  </li>
+                                  <li>
+                                      <a href="./enrollStudents.php">Edit Student Details</a>
+                                  </li>
+                                  <li>
+                                      <a href="feestatements.php">Fees Statements</a>
+                                  </li>
+                                  <li>
+                                      <a href="finance.php">Finance</a>
+                                  </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                            </li>
+                            <li>
+                              <a href="courses.php"><i class="fa fa-edit fa-fw"></i> Courses</a>
+                            </li>
+                            <li>
+                                <a href="notices.php"><i class="fa fa-edit fa-fw"></i> Notices</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="panels-wells.html">Panels and Wells</a>
+                                    </li>
+                                    <li>
+                                        <a href="buttons.html">Buttons</a>
+                                    </li>
+                                    <li>
+                                        <a href="notifications.html">Notifications</a>
+                                    </li>
+                                    <li>
+                                        <a href="typography.html">Typography</a>
+                                    </li>
+                                    <li>
+                                        <a href="icons.html"> Icons</a>
+                                    </li>
+                                    <li>
+                                        <a href="grid.html">Grid</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="#">Second Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Second Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level <span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="#">Third Level Item</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Third Level Item</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Third Level Item</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Third Level Item</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.nav-third-level -->
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="blank.html">Blank Page</a>
+                                    </li>
+                                    <li>
+                                        <a href="login.html">Login Page</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.sidebar-collapse -->
+                </div>
+                <!-- /.navbar-static-side -->
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Tables</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Student Details
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="dataTable_wrapper">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <thead>
+                                            <tr>
+                                                <th>Reg Number</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>National Id</th>
+                                                <th>Email</th>
+                                                <th>Telephone</th>
+                                                <th>Course</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="studentlist">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+
+                                <!-- /.table-responsive -->
+
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h4 class="modal-title" id="studentname"></h4>
+                                            </div>
+                                            <div class="modal-body" style="background:white;padding:0px;margin-top;10px;">
+
+<div class="row" style="padding:10px;">
+
+                                                <div class="col-md-6" style="position:relative;">
+
+                                                <img src="img/avatar.png" alt="" style="width:100px;border-radius:100px;">
+                                                <br><br>
+                                                <div id="details">
+
+                                                </div><br>
+                                                <a href="profile.php?id=7" type="button" class="btn btn-success" id="view_prof">view profile</a>
+
+                                                </div>
+
+                                                <div class="col-md-6"><br>
+                                                  <form class="" method="post">
+                                                      <label>course</label> <br>
+                                                      <div class="form-group input-group" id="studCourse">
+                                                      </div>
+                                                      <div class="the_reg">
+                                                        <!-- some Data is dumped here by js -->
+
+                                                      </div>
+                                                      <label>Year Sem</label> <br>
+                                                      <div class="form-group input-group ">
+                                                        <span class="input-group-addon">@</span>
+                                                        <select class="form-control " name="yersem" id="yersem">
+                                                          <option value="" selected disabled>Select Yersem</option>
+                                                          <option value="yr1sem1">Yr 1/ sem 1</option>
+                                                          <option value="yr1sem2">Yr 1/ sem 2</option>
+                                                          <option value="yr1sem3">Yr 1/ sem 3</option>
+                                                          <option  disabled>Year 2</option>
+                                                          <option value="yr2sem1">Yr 2/ sem 1</option>
+                                                          <option value="yr2sem2">Yr 2/ sem 2</option>
+                                                          <option value="yr2sem3">Yr 2/ sem 3</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <label>Mode of payment</label> <br>
+                                                      <div class="form-group input-group ">
+                                                        <span class="input-group-addon">@</span>
+                                                        <select class="form-control " name="payment" id="paymode">
+                                                          <option value="" selected disabled>Select Paymode</option>
+                                                          <option value="mpesa">M-pesa</option>
+                                                          <option value="equity">Equity bank</option>
+                                                          <option value="cooperative">co-operative bank</option>
+                                                          <option value="kcb">kenya commercial bank</option>
+                                                          <option value="family">Family bank</option>
+                                                        </select>
+                                                      </div>
+
+                                                      <label>Amount</label> <br>
+                                                      <div class="form-group input-group ">
+                                                        <span class="input-group-addon">@</span>
+                                                        <input type="number" id="update_amt" class="form-control" name="update_amt" placeholder="Enter Amount" required min="0">
+                                                      </div>
+                                                      <div class="" style="display:none">
+                                                        <label>Year</label> <br>
+                                                        <div class="form-group input-group ">
+                                                          <input type="text" id="date_current" class="form-control" name="update_amt"  required min="0">
+                                                        </div>
+                                                      </div>
+                                                  </form>
+
+
+                                                </div>
+                                              </div>
+
+                                                </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" id="update_payment" onclick="update_payment()">Save changes</button>
+                                            </div>
+                                        </div>
+                                        <!-- /.modal-content -->
+                                    </div>
+                                    <!-- /.modal-dialog -->
+                                </div>
+
+
+
+        <!-- jQuery -->
+        <script src="../js/jquery.min.js"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../js/bootstrap.min.js"></script>
+
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="../js/metisMenu.min.js"></script>
+
+        <!-- DataTables JavaScript -->
+        <script src="../js/dataTables/jquery.dataTables.min.js"></script>
+        <script src="../js/dataTables/dataTables.bootstrap.min.js"></script>
+
+        <!-- Custom Theme JavaScript -->
+        <script src="../js/startmin.js"></script>
+
+        <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+        <script>
+            $(document).ready(function() {
+
+                fetch();
+            });
+
+                students=[]
+
+                function fetch() {
+
+                  $.ajax({
+                    url:'./php/fetchStudents.php',
+                    method:"post",
+                    data:"",
+                    type:"json",
+                    success:function (data) {
+
+                      data=JSON.parse(data)
+                      console.log(data);
+                $.each(data,function (num,val) {
+                  students[""+val.id]=val
+                  $("#studentlist").append('<tr style="cursor:pointer;" onclick="view('+val.id+','+val.courses+')" class="odd gradeX">'
+                +'    <td>'+val.id+'</td>'
+                +'    <td>'+val.fname+'</td>'
+                +'    <td>'+val.lname+'</td>'
+                +'    <td>'+val.national_id+'</td>'
+                +'    <td class="center">'+val.email+'</td>'
+                +'    <td class="center">'+val.telephone+'</td>'
+                +'    <td>'+val.CourseName+'</td>'
+                +'    </tr>'
+
+                      )
+                })
+
+                $('#dataTables-example').DataTable({
+                        responsive: true
+                });
+                    },error:function (e) {
+                      console.error(e);
+                    }
+                  })
+
+                  }
+
+                var currentstudent=0
+                function view(id,courses) {
+                      currentstudent=id
+                      $("#myModal").modal()
+
+                      data=students[id]
+                      console.log(data.CourseName);
+                      $("#view_prof").click(function () {
+                        $(this).attr("href", "profile.php?id="+currentstudent);
+
+                      })
+                      $("#studentname").html(data.fname+" "+data.lname)
+                      $("#studCourse").html('<span class="input-group-addon">@</span><input class="form-control" type="text" id="stud_crs" name="courseStud" value="'+data.CourseName+'" >')
+                      $("#details").html("ID no : "+data.national_id
+                          +"<br>  REG No : "+ data.regnumber
+                          +"<br>  Email : "+ data.email
+                      )
+                      $(".the_reg").html('<input id="the_reg" type="hidden" value="'+data.regnumber+'" class="form-control" name="the_reg" placeholder="Enter Amount" required min="0">')
+
+                }
+
+
+                function update_payment() {
+                      var update_payment = $('#update_amt').val();
+                      var paymode =  $('#paymode').val();
+                      var yersem =  $('#yersem').val(); 
+                      var date_current =  $('#date_current').val();
+                      var stud_crs =  $('#stud_crs').val();
+                      var the_reg =  $('#the_reg').val();
+
+                      $.ajax({
+                        url:'./php/update_students.php',
+                        method:"post",
+                        data:"type="+paymode+"&amount="+update_payment+"&user="+currentstudent+"&yersem="+yersem+"&date_current="+date_current+"&stud_crs="+stud_crs+"&the_reg="+the_reg,
+                        type:"json",
+                        success:function (data) {
+                            console.log(data);
+                            alert(data);
+                            $('#update_amt, #paymode, #yersem,')[0].reset();
+                        }, error: function(e){
+                          console.error(e);
+                        }
+
+                      })
+                }
+                var date = new Date();
+                date = date.getFullYear()
+                // document.getElementById('date_current').val
+                // $("#date_current").val(date)
+                $("#date_current").attr("value",date);
+        </script>
+
+    </body>
+</html>
